@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome"/>
-    <Formulariodatos/>
+    <HelloWorld/>
+  <formularioreportes/>
+    <formulariodatos/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Formulariodatos from './components/Formulariodatos.vue'
+import Formularioreportes from './components/Formularioreportes.vue'
+import HelloWorld from './components/HelloWorld.vue'
+
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    Formulariodatos
+    Formulariodatos,
+    Formularioreportes
   }
 }
 </script>
