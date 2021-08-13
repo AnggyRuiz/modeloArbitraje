@@ -36,13 +36,6 @@ export default {
 </script>
 
 <style>
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-height: 100vh;
-width: 100%;
-}
 
 .contenedor {
     display: flex;
@@ -50,7 +43,8 @@ width: 100%;
     align-items: center;
   border: 1px solid black;
     width: 750px;
-    height: 450px;
+    height: 500px;
+    background-color: white;
 
 }
 

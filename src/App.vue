@@ -3,20 +3,24 @@
     <HelloWorld/>
   <formularioreportes/>
     <formulariodatos/>
+    <consultadereporte/>
   </div>
 </template>
 
 <script>
-import Formulariodatos from './components/Formulariodatos.vue'
 import Formularioreportes from './components/Formularioreportes.vue'
+import Formulariodatos from './components/Formulariodatos.vue'
 import HelloWorld from './components/HelloWorld.vue'
+import Consultadereporte from './components/consultadereporte.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
+     Formularioreportes,
     Formulariodatos,
-    Formularioreportes
+    Consultadereporte
+   
   }
 }
 </script>
@@ -29,5 +33,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+display: flex;
+flex-direction:row-reverse ;
 }
+
 </style>
