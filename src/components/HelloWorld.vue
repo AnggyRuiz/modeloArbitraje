@@ -1,17 +1,21 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-   
   </div>
 </template>
 
 <script>
+import utilsApi from "@/api/utils";
+
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+  created() {
+    utilsApi.test({ doc: 123, typedoc: "CC", fechaE: "01/12/2017" });
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
