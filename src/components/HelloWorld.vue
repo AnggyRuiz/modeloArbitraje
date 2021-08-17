@@ -5,16 +5,13 @@
 </template>
 
 <script>
-import utilsApi from "@/api/utils";
 
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
   },
-  created() {
-    utilsApi.test({ doc: 123, typedoc: "CC", fechaE: "01/12/2017" });
-  },
+ 
 };
 </script>
 

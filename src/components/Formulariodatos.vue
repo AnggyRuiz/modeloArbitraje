@@ -1,113 +1,118 @@
 <template>
-  <div class="contenedor">
-      <form class="formulario">
-<h3>Generar reporte</h3>
-<p>¡Recuerda! debes contar con la autorización del titular antes de realizar la consulta en la plataforma.</p>
-<textarea placeholder="Documento" wrap=""></textarea>
-<select>
-    <option value="CC">CC</option>
-        <option value="NIT">NIT</option>
-            <option value="CE">CE</option>
-                <option value="PEP">PEP</option>
-                    <option value="Nombre">PASAPORTE</option>
-                        <option value="Pasaporte">NOMBRE</option>
-</select>
+  <div class="containerForm">
+    <form class="form">
+      <h2>Generar reporte</h2>
+      <p id="alert" style="display: none;">
+        ¡Recuerda! debes contar con la autorización del titular antes de
+        realizar la consulta en la plataforma.
+      </p>
+      <div class="contentInput">
+        <input
+          class="inputDoc"
+          type="text"
+          placeholder="Ingrese el documento"
+        />
+      </div>
+      <div class="contentInfo">
+        <select>
+          <option value="CC">CC</option>
+          <option value="NIT">NIT</option>
+          <option value="CE">CE</option>
+          <option value="PEP">PEP</option>
+          <option value="Nombre">PASAPORTE</option>
+          <option value="Pasaporte">NOMBRE</option>
+        </select>
 
-<input  type="text"  placeholder="Fecha de expedición (dd/mm/yyyy)">
-<button>Enviar</button>
-<h4 class="tituloreporte">Enviar reporte via email si contiene hallazgo alto</h4>
-<div class="Boton">
-    <h4>No</h4>
-<label class="switch">
-  <input type="checkbox">
-  <span class="slider"></span>
-</label>
-<h4>Si</h4>
-</div>
-
-      </form>
+        <input type="date" />
+      </div>
+     <button type="button" class="btn btn-primary">Enviar</button>
+    </form>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
+<style lang="css" scoped>
 
-.contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  border: 1px solid black;
-    width: 750px;
-    height: 500px;
-    background-color: white;
-
+.containerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: white;
 }
-
-
-h3{
-    display: flex;
-    align-self: flex-start;
- font-family: "Poppins";
- font-size: 21px;
+.btn-primary {
+  margin-left: 5%;
+  margin-top: 3%;
 }
-p{
-    display: inline-block;
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    border-radius: 10px;
-    padding: 10px;
+h2 {
+  margin-left: 5%;
+  margin-bottom: 3%;
+  display: flex;
+  align-self: flex-start;
+  font-family: "Poppins";
+  
 }
-.formulario { 
-
-    height: 400px;
-    width: 600px;
-   
+p {
+  padding-top: 3%;
+  display: inline-block;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  border-radius: 10px;
+  padding: 10px;
 }
-textarea {
-
-    width: 570px;
-    border-radius: 10px;
-height: 40px;
-
+.form {
+  display: flex;
+  flex-direction: column;
+  width:90%;
+}
+.contentInput {
+  display: flex;
+  justify-content: center;
+}
+.contentInfo {
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+}
+.inputDoc {
+  width: 90%;
+  padding: 10px;
+  height: 45px;
 }
 select {
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
-
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
 }
 input {
-width: 350px;
-    padding: 10px;
-    border-radius: 10px;
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 button {
-    display: flex;
-    align-self: flex-start;
-    margin: 4px;
-    padding: 12px;
-    border-radius: 10px;
-    background-color: darkturquoise;
+  display: flex;
+  align-self: flex-start;
 }
 .tituloreporte {
-    display: flex;
-    justify-self: flex-start;
+  display: flex;
+  justify-self: flex-start;
 }
-   
+
 .opciones {
-    display: flex;
-    justify-content: flex-start;
-    width: 50px;
+  display: flex;
+  justify-content: flex-start;
+  width: 50px;
 }
 .switch {
-    border: 1px solid black;
+  border: 1px solid black;
   width: 60px;
   height: 34px;
 }
@@ -118,7 +123,7 @@ button {
   height: 34px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -132,8 +137,8 @@ button {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -144,16 +149,16 @@ button {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
@@ -162,17 +167,14 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-.Boton{
-    display: flex;
-    justify-content: center;
-    flex-direction: row ;
-    align-items: center;
+.Boton {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
 
-    width: 150px;
-    justify-content: space-evenly;
-    height: 40px;
-
+  width: 150px;
+  justify-content: space-evenly;
+  height: 40px;
 }
-
-
 </style>

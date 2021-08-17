@@ -1,20 +1,21 @@
-import apiDatos from '@/api/https-tusdatos';
+import axios from "axios";
 
 //Función de prueba para la conexion con tus datos
-const test = async(data) => {
-    const idToken = { usuario: 'pruebas', contraseña: 'password' }
-    console.log(idToken);
-    console.log("CONECTANDO", data);
-    const rta = await apiDatos.post("/api/launch/", { data: data }, {
-        headers: {
-            "Content-Type": "application/json",
-        },
-    }).catch(() => {
-        return false;
+const test = async() => {
+    var session_url = 'http://docs.tusdatos.co/api/launch';
+    var uname = 'pruebas';
+    var pass = 'password';
+    axios.post(session_url, {}, {
+        auth: {
+            username: uname,
+            password: pass
+        }
+    }).then(function(res) {
+        console.log('Authenticated', res);
+    }).catch(function(error) {
+        console.log('Error on Authentication', error);
     });
-    console.log("rtaaa", rta);
-    return rta ? true : false;
-};
+}
 export default {
     test,
 };

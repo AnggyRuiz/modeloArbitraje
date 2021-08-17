@@ -1,40 +1,47 @@
 <template>
-  <div id="app">
-    <HelloWorld/>
-  <formularioreportes/>
-    <formulariodatos/>
-    <consultadereporte/>
+  <div>
+    <!--     <HelloWorld />
+ -->
+    <div class="containerMain">
+      <formulariodatos />
+      <consultadereporte />
+    </div>
+    <div class="tableInfo">
+      <formularioreporte />
+    </div>
   </div>
 </template>
 
 <script>
-import Formularioreportes from './components/Formularioreportes.vue'
-import Formulariodatos from './components/Formulariodatos.vue'
-import HelloWorld from './components/HelloWorld.vue'
-import Consultadereporte from './components/consultadereporte.vue'
+import utilsApi from "@/api/utils";
 
+//import HelloWorld from "@/components/HelloWorld.vue";
+import Consultadereporte from "@/components/ConsultaReporte.vue";
+import Formulariodatos from "@/components/FormularioDatos.vue";
+import Formularioreporte from "./components/Formularioreporte.vue";
 export default {
-  name: 'App',
+  name: "App",
+  created() {
+    utilsApi.test();
+  },
   components: {
-    HelloWorld,
-     Formularioreportes,
+    // HelloWorld,
     Formulariodatos,
-    Consultadereporte
-   
-  }
-}
+    Consultadereporte,
+    Formularioreporte,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-display: flex;
-flex-direction:row-reverse ;
+.containerMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 40px;
 }
-
+.tableInfo {
+  display: flex;
+  justify-content: center;
+}
 </style>
