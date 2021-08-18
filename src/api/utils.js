@@ -2,12 +2,12 @@ import tusDatos from './https-tusdatos';
 
 //Función de prueba para la conexion con tus datos
 const test = async() => {
-    const username = 'pruebas';
-    const password = 'password';
+    const username = 'sosorno@isciolab.com';
+    const password = 'S52e68b0';
     const basicAuth = 'Basic ' + btoa(username + ':' + password);
     const rta = await tusDatos
         .post(
-            '/api/launch', { "fechaE": "01/12/2017", "typedoc": "CC", "doc": 123 }, {
+            '/api/launch', { "fechaE": "02/05/2017", "typedoc": "CC", "doc": 1097408141 }, {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: basicAuth,
