@@ -17,8 +17,8 @@ import utilsApi from "@/api/utils";
 
 //import HelloWorld from "@/components/HelloWorld.vue";
 import Consultadereporte from "@/components/ConsultaReporte.vue";
-import Formulariodatos from "@/components/FormularioDatos.vue";
 import Formularioreporte from "./components/Formularioreporte.vue";
+import Formulariodatos from './components/Formulariodatos.vue';
 export default {
   name: "App",
   created() {
@@ -26,9 +26,9 @@ export default {
   },
   components: {
     // HelloWorld,
-    Formulariodatos,
     Consultadereporte,
     Formularioreporte,
+    Formulariodatos,
   },
 };
 </script>
