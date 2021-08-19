@@ -1,14 +1,15 @@
 <template>
   <div>
+    <login />
     <!--     <HelloWorld />
  -->
-    <div class="containerMain">
+ <!--    <div class="containerMain">
       <formulariodatos />
       <consultadereporte />
     </div>
     <div class="tableInfo">
       <formularioreporte />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -16,9 +17,10 @@
 import utilsApi from "@/api/utils";
 
 //import HelloWorld from "@/components/HelloWorld.vue";
-import Consultadereporte from "@/components/ConsultaReporte.vue";
+/* import Consultadereporte from "@/components/ConsultaReporte.vue";
 import Formularioreporte from "./components/Formularioreporte.vue";
-import Formulariodatos from './components/Formulariodatos.vue';
+import Formulariodatos from './components/Formulariodatos.vue'; */
+import Login from './components/Login.vue';
 export default {
   name: "App",
   created() {
@@ -27,9 +29,10 @@ export default {
   },
   components: {
     // HelloWorld,
-    Consultadereporte,
+    /* Consultadereporte,
     Formularioreporte,
-    Formulariodatos,
+    Formulariodatos, */
+    Login
   },
 };
 </script>
