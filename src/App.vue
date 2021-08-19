@@ -22,7 +22,8 @@ import Formulariodatos from './components/Formulariodatos.vue';
 export default {
   name: "App",
   created() {
-    utilsApi.test();
+    utilsApi.test({ "doc": 123, "typedoc": "CC", "fechaE": "01/12/2017" });
+    
   },
   components: {
     // HelloWorld,

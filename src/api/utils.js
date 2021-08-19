@@ -1,25 +1,26 @@
-import tusDatos from './https-tusdatos';
-
-//Función de prueba para la conexion con tus datos
-const test = async() => {
-    const username = 'sosorno@isciolab.com';
-    const password = 'S52e68b0';
+import http from "./https-tusdatos";
+// metodo para probar conexion con tus datos
+const test = async(data) => {
+    const username = 'pruebas';
+    const password = 'password';
     const basicAuth = 'Basic ' + btoa(username + ':' + password);
-    const rta = await tusDatos
+    console.log("BEFORE SEARCH", basicAuth);
+    const rta = await http
         .post(
-            '/api/launch', { "fechaE": "02/05/2017", "typedoc": "CC", "doc": 1097408141 }, {
+            "/launch", { data: data }, {
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: basicAuth,
+                    Authorization: 'Basic cHJ1ZWJhczawYXNzd09tDA==',
                 },
-            }).catch((err) => {
-            console.log(err);
+            }
+        )
+        .catch(() => {
             return false;
         });
-    console.log('rtaaaaaa', rta);
+    console.log("rtaaa", rta);
     return rta ? true : false;
+};
 
-}
 export default {
     test,
 };

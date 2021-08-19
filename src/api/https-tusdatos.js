@@ -2,9 +2,9 @@ import axios from "axios";
 
 export default axios.create({
     //pruebas
-    //baseURL: "http://docs.tusdatos.co",
+    baseURL: "http://docs.tusdatos.co/api",
     //Produccion
-    baseURL: "https://dash-board.tusdatos.co",
+    //baseURL: "https://dash-board.tusdatos.co",
     headers: {
         "Content-type": "application/json",
     },
