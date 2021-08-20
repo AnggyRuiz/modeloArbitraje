@@ -47,5 +47,6 @@ export default {
 .tableInfo {
   display: flex;
   justify-content: center;
+
 }
 </style>

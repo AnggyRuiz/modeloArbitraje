@@ -2,9 +2,9 @@
   <div class="Container">
       <form>
            <h3 class="H3Login">Login</h3>
-           <span>Correo</span>
+           <span class="SpanCorreo">Correo</span>
       <input class="InputEmail" type="Email">
-      <span>Contraseña</span>
+      <span class="SpanContraseña">Contraseña</span>
       <input class="InputPassword" type="Password">
       <button class="button2">Ingresar</button>
   </form>
@@ -18,20 +18,28 @@ export default {
 </script>
 
 <style>
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(150, 150, 150, 0.76);
+    }
 .Container {
-    background-color:rgb(217, 250, 245);
+    background-color:rgba(195, 247, 242, 0.644);
     display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 300px;
-height: 400px;
+width: 320px;
+height: 420px;
 border-radius: 50px;
 }
 .InputEmail {
-    padding: 10px;
-    margin-bottom: 16px;
-    width: 180px;
+    margin-bottom: 35px;
+    width:200px;
     border-radius: 0px;
     border-right: 0px;
     border-left: 0px;
@@ -40,8 +48,8 @@ border-radius: 50px;
   background: none;
 }
 .InputPassword {
-    width: 180px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
+    width: 200px;
      border-radius: 0px;
     border-right: 0px;
     border-left: 0px;
@@ -54,8 +62,9 @@ border-radius: 50px;
     background-color: white;
     color: black;
     border: 2px solid rgb(92, 185, 221);
-    padding: 12px;
-    margin-left: 60px;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
     }
     .button2:hover {
     background-color: #3b7fbe;
@@ -65,11 +74,23 @@ border-radius: 50px;
 .H3Login {
     color: black;
     font-size: 26px;
-    margin-left: 70px;
     margin-bottom: 55px;
 }
 span {
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+form {
     display: flex;
-    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.SpanCorreo{
+    margin-right: 160px;
+}
+
+.SpanContraseña{
+    margin-right: 140px;
 }
 </style>
