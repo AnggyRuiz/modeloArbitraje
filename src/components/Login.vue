@@ -7,7 +7,7 @@
       <span class="SpanContraseña">Contraseña</span>
       <input class="InputPassword" type="Password">
       <button class="button2">Ingresar</button>
-  </form>
+        </form>
   </div>
 </template>
 
@@ -18,15 +18,6 @@ export default {
 </script>
 
 <style>
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(150, 150, 150, 0.76);
-    }
 .Container {
     background-color:rgba(195, 247, 242, 0.644);
     display: flex;
@@ -65,6 +56,8 @@ border-radius: 50px;
     padding: 10px;
     border-radius: 12px;
     font-size: 14px;
+    width: 80px;
+    align-self: center;
     }
     .button2:hover {
     background-color: #3b7fbe;
@@ -75,6 +68,7 @@ border-radius: 50px;
     color: black;
     font-size: 26px;
     margin-bottom: 55px;
+    align-self: center;
 }
 span {
     font-size: 11px;
@@ -82,7 +76,6 @@ span {
 }
 form {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
 }

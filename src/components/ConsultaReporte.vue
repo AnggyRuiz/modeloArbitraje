@@ -35,6 +35,7 @@ export default {};
   flex-direction: column;
   align-items: flex-start;
   width: 50%;
+
 }
 .color {
   opacity: 80%;

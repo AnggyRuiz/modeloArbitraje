@@ -1,25 +1,26 @@
 <template>
-  <div>
-    <login />
-    <!--     <HelloWorld />
- -->
- <!--    <div class="containerMain">
+  <div class="ContainerMain">
+     <div class="ContainerLogin">
+    <login />  
+ </div>
+    <div class="ContainerDatosyReporte">
       <formulariodatos />
       <consultadereporte />
     </div>
+ <HelloWorld />
     <div class="tableInfo">
       <formularioreporte />
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
 import utilsApi from "@/api/utils";
 
-//import HelloWorld from "@/components/HelloWorld.vue";
-/* import Consultadereporte from "@/components/ConsultaReporte.vue";
+import HelloWorld from "@/components/HelloWorld.vue";
+ import Consultadereporte from "@/components/ConsultaReporte.vue";
 import Formularioreporte from "./components/Formularioreporte.vue";
-import Formulariodatos from './components/Formulariodatos.vue'; */
+import Formulariodatos from './components/Formulariodatos.vue'; 
 import Login from './components/Login.vue';
 export default {
   name: "App",
@@ -28,25 +29,29 @@ export default {
     
   },
   components: {
-    // HelloWorld,
-    /* Consultadereporte,
+    HelloWorld,
+     Consultadereporte,
     Formularioreporte,
-    Formulariodatos, */
+    Formulariodatos,
     Login
   },
 };
 </script>
 
 <style>
-.containerMain {
+.ContainerMain {
+  min-width: 590px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+.ContainerDatosyReporte{
+  display: flex;
+  justify-content: space-between;
 }
 .tableInfo {
   display: flex;
   justify-content: center;
-
+width:100%;
 }
 </style>

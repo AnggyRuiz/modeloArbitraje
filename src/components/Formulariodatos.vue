@@ -46,6 +46,7 @@ export default {};
 .btn-primary {
   margin-left: 5%;
   margin-top: 3%;
+  
 }
 h2 {
   margin-left: 5%;
@@ -80,6 +81,7 @@ p {
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 3%;
+    
 }
 .inputDoc {
   width: 90%;
