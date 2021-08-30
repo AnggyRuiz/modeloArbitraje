@@ -1,22 +1,21 @@
 <template>
    
 <div>
-   <div class="container d-flex align-items-center justify-content-center ">
-        <div class="row justify-content-between ps-3 ">
+        <div class="row justify-content-between ps-4">
+  <generar-reporte/>
   <reporte-solicitado/>
-      <tabla/>
-      <generate-report/>
 </div>
-</div>
+ <tabla/>
 </div>
 </template>
 
 <script>
-import GenerateReport from './GenerateReport.vue'
-import ReporteSolicitado from './ReporteSolicitado.vue'
+import GenerarReporte from './GenerarReporte.vue'
 import Tabla from './Tabla.vue'
+import ReporteSolicitado from './ReporteSolicitado.vue'
+
 export default {
-  components: { ReporteSolicitado, Tabla, GenerateReport },
+  components: { ReporteSolicitado, Tabla, GenerarReporte, },
 }
 </script>
 
