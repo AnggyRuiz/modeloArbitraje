@@ -1,9 +1,7 @@
 <template>
-   <div class="col-12 col-md-12 mt-5 border">
-     <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
-  
-</div>
- <table class="table">
+   <div class="container col-12 col-md-12 mt-5 border">
+     <div class="table-responsive">
+ <table class="table table-hover table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -120,7 +118,8 @@
     </tr>
   </tbody>
 </table>
-    </div>
+</div>
+</div>
 </template>
 
 <script>
